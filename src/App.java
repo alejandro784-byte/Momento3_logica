@@ -36,6 +36,14 @@ public class App {
             } else if (opcion == 3) {
                 System.out.println("¿Qué nueva prenda deseas agregar al inventario?");
                 String nuevaPrenda = leer.nextLine();
+                
+                for (int i = 0; i < referencias.length; i++) {
+                    if (referencias[i] == null) {
+                        referencias[i] = nuevaPrenda;
+                        System.out.println("Prenda agregada con éxito");
+                        break;
+                    }
+                }
             } else if (opcion == 4) {
                 System.out.println("Cerrando sistema...");
             } else {
